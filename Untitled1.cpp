@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+// distance is reserved word in C++ so we use capital D 
+class Distance
+{
+	private:
+		int feet;
+		int inches;
+		public:
+			Distance()  //default constructor
+			{
+				feet=0;
+				inches=0;
+			}
+			Distance(int a,int b) //parameterized constructor
+			{
+				feet=a;
+				inches=b;
+			}
+			Distance operator + (Distance d) //syntax
+			{
+				Distance temp; //temporary object
+				temp.feet=feet+d.feet;
+				temp.inches=inches+d.inches;
+				
+				temp.feet=temp.feet+temp.inches/12;  //distance conversion
+				temp.inches=temp.inches%12;
+				return temp;
+			}
+			void display()
+			{
+				cout<<"Feet is: "<<feet<<endl;
+				cout<<"Inches is: "<<inches<<endl;
+			}
+};
+
+int main()
+{
+	Distance d1,d2,d3;  //3 objects 
+	d1=Distance(10,24);
+	d1.display();
+	d2=Distance(30,52);
+	d2.display();
+	d3=d1+d2;
+	d3.display();
+	return 0;
+}
+
+/*
+Output:
+Feet is: 10
+Inches is: 24
+Feet is: 30
+Inches is: 52
+Feet is: 46
+Inches is: 4
+*/
