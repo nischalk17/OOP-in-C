@@ -1,3 +1,4 @@
+//overloading + operator to add distances using member function
 #include<iostream>
 using namespace std;
 // distance is reserved word in C++ so we use capital D 
