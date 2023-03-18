@@ -1,0 +1,54 @@
+//overloading + operator to add complex numbers using member function
+#include<iostream>
+using namespace std;
+
+class complex
+{
+	private:
+		int x;
+		int y;
+	public:
+			complex()  //default constructor
+			{
+				x=0;
+				y=0;
+			}
+			complex(int a,int b) //parameterized constructor
+			{
+				x=a;
+				y=b;
+			}
+			complex operator + (complex c) //syntax
+			{
+				complex temp; //temporary object
+				temp.x=x+c.x;
+				temp.y=y+c.y;
+				return temp;
+			}
+			void display()
+			{
+				cout<<"Real part is: "<<x<<endl;
+				cout<<"Imaginary part is: "<<y<<endl;
+			}
+};
+
+int main()
+{
+	complex c1,c2,c3;  //3 objects
+	c1=complex(10,20);
+	c1.display();
+	c2=complex(30,40);
+	c2.display();
+	c3=c1+c2;
+	c3.display();
+ 	return 0;
+}
+
+
+/*Output:
+Real part is: 10
+Imaginary part is: 20
+Real part is: 30
+Imaginary part is: 40
+Real part is: 40
+Imaginary part is: 60 */
