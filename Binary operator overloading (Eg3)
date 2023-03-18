@@ -1,0 +1,60 @@
+//overloading + operator to add time using member function
+#include<iostream>
+using namespace std;
+
+class time
+{
+	private:
+		int hour;
+		int min;
+		int sec;
+	public:
+			time()  //default constructor
+			{
+				hour=0;
+				min=0;
+				sec=0;
+			}
+			time(int a,int b, int c) //parameterized constructor
+			{
+				hour=a;
+				min=b;
+				sec=c;
+			}
+			time operator + (time t) //syntax
+			{
+				time temp; //temporary object
+				temp.hour=hour+t.hour;
+				temp.min=min+t.min;
+				temp.sec=sec+t.sec;
+				
+				temp.hour=temp.hour+temp.min/60;  //value conversion
+				temp.min=temp.min+temp.sec/60;
+				temp.min=temp.min%60;
+				temp.sec=temp.sec%60;
+				return temp;
+			}
+			void display()
+			{
+				cout<<"The time is: "<<hour<<" "<<min<<" "<<sec<<endl;
+			}
+};
+
+int main()
+{
+	time t1,t2,t3;  //3 objects
+	t1=time(05,30,52);
+	t1.display();
+	t2=time(04,59,56);
+	t2.display();
+	t3=t1+t2;
+	t3.display();
+ 	return 0;
+}
+
+
+/*Output:
+The time is: 5 30 52
+The time is: 4 59 56
+The time is: 10 30 48
+*/
