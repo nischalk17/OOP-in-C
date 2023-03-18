@@ -24,7 +24,7 @@ class Distance
 				temp.feet=feet+d.feet;
 				temp.inches=inches+d.inches;
 				
-				temp.feet=temp.feet+temp.inches/12;  //distance conversion
+				temp.feet=temp.feet+temp.inches/12;  //value conversion
 				temp.inches=temp.inches%12;
 				return temp;
 			}
