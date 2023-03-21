@@ -1,0 +1,27 @@
+//function overloading: use of two or more functions with same name but different parameters
+
+#include<iostream>
+using namespace std;
+
+int add (int a, int b)  //first function with 2 arguments
+{
+    return (a+b);
+}
+int add (int a, int b,int c)  //second function with 3 arguments
+{
+     return (a+b+c);
+}
+
+
+int main()
+{
+	int a=1,b=2,c=3;
+	cout<<"The sum is: "<<(a+b)<<endl;
+	cout<<"The sum is: "<<(a+b+c)<<endl;
+    return 0;
+}
+
+/*Output:
+The sum is: 3
+The sum is: 6
+*/
