@@ -1,0 +1,43 @@
+/*Example of Multiple Inheritance:
+A single class is derived form 2 base classes
+Simple Explanation: The properties of both the parents is inherited by the son */
+
+
+#include<iostream>
+using namespace std;
+class vehicle 
+{
+	public:
+	vehicle()
+	{
+	cout << "This is a vehicle"<<endl;
+	}
+};
+class FourWheeler
+{
+	public:
+		FourWheeler()
+		{
+			cout<<"This is a 4 wheeler vehicle"<<endl;
+		}
+};
+
+class car:public vehicle, public FourWheeler
+{
+	public:
+	car()
+	{
+	cout << "Car"<<endl;
+	}
+};
+
+int main()
+{
+	car obj;
+	return 0;
+}
+
+/* Output:
+This is a vehicle
+This is a 4 wheeler vehicle
+Car */
