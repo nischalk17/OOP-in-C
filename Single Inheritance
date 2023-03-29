@@ -23,7 +23,7 @@ class computer:public electronics //syntax of single inheritance
 };
 int main()
 {
-	computer c1; //object creation
+	computer obj; //object creation
 	return 0;
 }
 
