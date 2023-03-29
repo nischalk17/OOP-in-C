@@ -1,0 +1,46 @@
+/* Example of Hierarchial inheritance:
+Two classes are derived from a single class
+Simple Explanation: Dad's property is inherited by both son and daughter*/
+
+#include<iostream>
+using namespace std;
+class vehicle //base class
+{
+	public:
+		void display()
+		{
+			cout<<"These are the vehicles:"<<endl;
+		}
+};
+
+class car:public vehicle  //first sub-class
+{
+	public:
+		void display1()
+		{
+			cout<<"Car"<<endl;
+		}
+};
+
+class bus:public vehicle  //second sub-class
+{
+	public:
+	void display2()
+	{
+		cout<<"Bus"<<endl;
+	}
+};
+
+int main()
+{
+	car obj1;
+	obj1.display();
+	obj1.display1();
+	bus obj2;
+	obj2.display2();
+}
+
+/*  Output:
+These are the vehicles:
+Car
+Bus */
