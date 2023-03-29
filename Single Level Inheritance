@@ -1,0 +1,34 @@
+/*Example of Single level inheritance:  
+A derives B or B is derived from A (1:1)
+Simple explanation: Dad's property is inherited by son
+*/
+
+#include<iostream>
+using namespace std;
+class electronics  //base class
+{
+	public:
+		electronics()
+		{
+			cout<<"Electronic devices are:"<<endl;
+		}
+};
+class computer:public electronics //syntax of single inheritance
+{
+	public:
+		computer()
+		{
+			cout<<"Computer"<<endl;
+		}
+};
+int main()
+{
+	computer c1; //object creation
+	return 0;
+}
+
+/*
+Output:
+Electronic devices are:
+Computer
+*/
