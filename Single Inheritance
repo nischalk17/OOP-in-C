@@ -5,30 +5,29 @@ Simple explanation: Dad's property is inherited by son
 
 #include<iostream>
 using namespace std;
-class electronics  //base class
+class vehicle //base class
 {
 	public:
-		electronics()
-		{
-			cout<<"Electronic devices are:"<<endl;
-		}
+	vehicle()
+	{
+	cout << "This is a vehicle"<<endl;
+	}
 };
-class computer:public electronics //syntax of single inheritance
+class car:public vehicle   //syntax
 {
 	public:
-		computer()
-		{
-			cout<<"Computer"<<endl;
-		}
+	car()
+	{
+	cout << "Car"<<endl;
+	}
 };
 int main()
 {
-	computer obj; //object creation
+	car obj;
 	return 0;
 }
 
-/*
-Output:
-Electronic devices are:
-Computer
+*/Output:
+This is a vehicle
+Car
 */
