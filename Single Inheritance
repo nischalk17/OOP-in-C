@@ -13,7 +13,7 @@ class vehicle //base class
 	cout << "This is a vehicle"<<endl;
 	}
 };
-class car:public vehicle   //syntax
+class car:public vehicle   //sub-class
 {
 	public:
 	car()
