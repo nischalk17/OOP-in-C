@@ -1,0 +1,37 @@
+/*Also called compile-time or Static Polymorphism
+Can be achieved through function overloading or operator overloading
+Simple eg is shown below*/
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+	double a,b;
+	public:
+		void show(int x, int y)
+		{
+			a=x;
+			b=y;
+			cout<<a<<" "<<b<<endl;
+		}
+		void show(double x, double y)
+		{
+			a=x;
+			b=y;
+			cout<<a<<" "<<b<<endl;
+		}
+};
+
+int main()
+{
+	A obj1,obj2;
+	obj1.show(10,20);
+	obj2.show(10.5,20.5);
+	return 0;
+}
+
+/*Output:
+10 20
+10.5 20.5
+*/
