@@ -1,0 +1,40 @@
+/*	Hybrid Inheritance: implementing two or more types of inheritance
+	Eg of Hybrid Inheritance using multiple and SingleInheritance (2:1:1):	*/
+
+#include<iostream>
+using namespace std;
+
+class vehicle		//first base class
+{
+	public:
+		vehicle()
+		{
+		cout<<"Vehicle:"<<endl;
+		}
+};
+
+class FourWheeler		//second base class
+{
+	public:
+		FourWheeler()
+		{
+		cout<<"Car"<<endl;
+		}
+};
+
+class Car: public vehicle, public FourWheeler		//sub-class
+{};
+
+class Toyota:public Car		//sub class derived from subclass Car
+{};
+
+int main()
+{
+	Toyota obj;
+	return 0;
+}
+
+/* Output:
+Vehicle:
+Car
+*/
