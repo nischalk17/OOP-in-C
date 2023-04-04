@@ -1,0 +1,31 @@
+/* 'this' pointer is used whenever the name of both the instance and local variable is same
+Simple eg is shown below */
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+	private:
+	int x;
+	public:
+	A(int x)		//constructor
+	{
+		this->x = x;	//Here, x of LHS is instance variable and x of RHS in local variable
+	}
+	void show()
+	{
+		cout<<"x= "<<x<<endl;
+	}
+};
+
+int main()
+{
+	A obj(20);
+	obj.show();
+	return 0;
+}
+
+/*Output:
+x=20
+*/
