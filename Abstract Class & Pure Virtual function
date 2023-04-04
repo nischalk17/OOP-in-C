@@ -53,6 +53,3 @@ class rectangle:public polygon    //concrete class
 The area of rectangle is: 24
 The area of triangle is: 12
 */
-
-
-			
