@@ -30,7 +30,7 @@ class rectangle:public polygon    //concrete class
  	public:
  		int area()
  		{
- 				return (width*height)/2;
+ 			return (width*height)/2;
 		 }
  };
  
