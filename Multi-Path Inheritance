@@ -1,0 +1,52 @@
+/*	MultiPath Inheritance: Special case of Hybrid Inheritance
+Ambiguity may arise here and it is also removed in the following eg
+Eg of Multipath Inheritance using Hierarchial and Multiple Inheritance(1:2:1):	
+*/	
+
+
+#include<iostream>
+using namespace std;
+class vehicle		//base class
+{
+    public:
+    void display1()
+    {
+        cout<<"These are the vehicles"<<endl;
+    }
+};
+
+class taxi:public vehicle		//sub class derived from base class
+{
+    public:
+    void display1()
+    {
+        vehicle::display1();
+        cout<<"The fare of taxi is: "<<endl;
+    }
+};
+
+class bus:public vehicle		//another sub class derived from base class
+{
+    public:
+    void display1()
+    {
+        cout<<"The fare of bus is: "<<endl;
+    }
+};
+
+class fare:public taxi, public bus		//new sub class derived from sub classes taxi & bus
+{};
+
+int main()
+{
+    fare obj;
+    obj.taxi::display1();
+    obj.bus::display1();
+    return 0;
+}
+
+/* Output:
+These are the vehicles
+The fare of taxi is:
+The fare of bus is:
+*/
