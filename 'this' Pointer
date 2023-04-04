@@ -11,8 +11,9 @@ class A
 	public:
 	A(int x)		//constructor
 	{
-		this->x = x;	//Here, x of LHS is instance variable and x of RHS in local variable
+		this->x = x;	//Here, x of LHS is instance variable and x of RHS is local variable
 	}
+	
 	void show()
 	{
 		cout<<"x= "<<x<<endl;
