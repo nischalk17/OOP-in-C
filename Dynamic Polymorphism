@@ -1,0 +1,52 @@
+/*To achieve DYNAMIC (RUN-TIME) POLYMORPHISM, we use virtual function in base class 
+and pointer to object of base class*/
+
+#include<iostream>
+using namespace std;
+
+class A		//base class
+{
+	public:
+		virtual void show()		//virtual function		
+		{
+			cout<<"This is class A"<<endl;
+		}
+};
+
+class B: public A		//first derived class
+{
+	public:
+		void show()
+		{
+			cout<<"This is class B"<<endl;	
+		}
+};
+
+class C: public A		//second derived class
+{
+	public:
+		void show()
+		{
+			cout<<"This is class C"<<endl;	
+		}
+};
+
+int main()
+{
+	A *p, a;		//pointer to object of base class
+	B b;
+	C c;
+	p=&b;   //object b pointed by base class pointer p
+	p->show();
+	p=&c;   //object c pointed by base class pointer p
+	p->show();
+	p=&a;   //object a pointed by base class pointer p
+	p->show();
+	return 0;
+}
+
+/*	Output:
+This is class B
+This is class C
+This is class A
+*/
