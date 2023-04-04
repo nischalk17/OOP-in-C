@@ -1,0 +1,47 @@
+/*	Multilevel Inheritance: A derives B and B derives C (1:1:1)
+						   	Or C is derived from B and B is derived from A
+	Simple Explanation: Property of grandparent is inherited by parent and the 
+						property of parent is inherited by the child
+	Example shown below:													*/
+	
+  
+#include<iostream>
+using namespace std;
+class vehicle 	//base class
+{
+	public:
+	vehicle()
+	{
+		cout<<"This is a Vehicle"<<endl;
+	}	
+};
+
+class FourWheeler:public vehicle	//sub class derived from class vehicle
+{
+	public:
+		FourWheeler()
+		{
+			cout<<"This is a 4 Wheeler Vehicle"<<endl;	
+		}
+};
+
+class car: public FourWheeler		//sub class derived from class FourWheeler
+{
+	public:
+		car()
+		{
+			cout<<"Car"<<endl;	
+		}	
+};
+
+int main()
+{
+	car obj;
+	return 0;
+}
+
+/*Output:
+This is a Vehicle
+This is a 4 Wheeler Vehicle
+Car
+*/
