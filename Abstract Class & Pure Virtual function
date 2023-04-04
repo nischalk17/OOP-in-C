@@ -49,8 +49,8 @@ class rectangle:public polygon    //concrete class
  	return 0;
  }
  
- /*Output:
- The area of rectangle is: 24
+/*Output:
+The area of rectangle is: 24
 The area of triangle is: 12
 */
 
