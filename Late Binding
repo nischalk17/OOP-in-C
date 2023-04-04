@@ -1,4 +1,5 @@
-/*To achieve DYNAMIC (RUN-TIME) POLYMORPHISM, we use virtual function in base class 
+/*Also called run-time or dynamic polymorphism
+To achieve DYNAMIC (RUN-TIME) POLYMORPHISM, we use virtual function in base class 
 and pointer to object of base class*/
 
 #include<iostream>
