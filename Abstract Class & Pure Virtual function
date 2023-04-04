@@ -1,0 +1,58 @@
+//Abstract class is a class containing at least one pure virtual function
+
+#include<iostream>
+using namespace std;
+
+class polygon   //abstract class
+{
+	protected:
+		int width, height;
+	public:
+		void setvalues(int a, int b)
+		{
+			width=a;
+			height=b;
+		}
+	virtual int area()=0;		    //syntax of pure virtual function
+};
+
+class rectangle:public polygon    //concrete class
+{
+	public:
+		int area()
+		{
+			return (width*height);
+		}
+ };
+ 
+ class triangle: public polygon   //concrete class
+ {
+ 	public:
+ 		int area()
+ 		{
+ 				return (width*height)/2;
+		 }
+ };
+ 
+ int main()
+ {
+ 	polygon *p;
+ 	rectangle r;
+ 	p=&r;
+ 	p->setvalues(4,6);
+ 	cout<<"The area of rectangle is: "<<p->area()<<endl;
+ 	
+ 	triangle t;
+ 	p=&t;
+ 	p->setvalues(4,6);
+ 	cout<<"The area of triangle is: "<<p->area()<<endl;
+ 	return 0;
+ }
+ 
+ /*Output:
+ The area of rectangle is: 24
+The area of triangle is: 12
+*/
+
+
+			
