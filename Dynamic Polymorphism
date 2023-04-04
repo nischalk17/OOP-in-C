@@ -45,7 +45,7 @@ int main()
 	return 0;
 }
 
-/*	Output:
+/*Output:
 This is class B
 This is class C
 This is class A
