@@ -1,4 +1,4 @@
-/*	MultiPath Inheritance: Special case of Hybrid Inheritance
+/*MultiPath Inheritance: Special case of Hybrid Inheritance
 Ambiguity may arise here and it is also removed in the following eg
 Eg of Multipath Inheritance using Hierarchial and Multiple Inheritance(1:2:1):	
 */	
