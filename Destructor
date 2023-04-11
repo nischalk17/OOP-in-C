@@ -1,0 +1,39 @@
+/* Destructor is a special member function which deletes 
+an object that was initialized by the constructor.
+It is denoted by tilde '~' sign	  */
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+	public:
+	int a,b;
+	A()			//default constructor
+	{
+		a=20;
+		b=30;
+	}
+
+	void show()
+	{
+		cout<<"The sum is: "<<a+b<<endl;
+	}
+	
+	~A()		//destructor
+	{
+		cout<<"Memory is released!"<<endl;
+	}
+};
+
+int main()
+{
+	A obj;
+	obj.show();
+	return 0;
+}
+
+/* Output:
+The sum is: 50
+Memory is released!
+*/
