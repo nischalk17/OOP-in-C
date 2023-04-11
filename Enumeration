@@ -1,0 +1,20 @@
+/* Enumeration is user-defined data type that can be assigned some limited values
+In the eg shown below, we have assigned the value of Sunday as 1 and by the use
+of enum, the value of other days are automatically increased by 1
+If the values are not assigned, 0 is ssigned by default to the first member of the enum list*/
+
+
+#include<iostream>
+using namespace std;
+enum days {Sunday=1, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
+int main()
+{
+	days d;
+	d=Thursday;
+	cout<<"Today is "<<d+1<<"th day";
+	return 0;
+	}
+	
+/* Output:
+Today is 6th day
+*/
