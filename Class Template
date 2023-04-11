@@ -1,0 +1,43 @@
+// Class templates are used to define generic containers
+
+
+#include<iostream>
+using namespace std;
+template <class T>		  //Here, T represents any data type
+class A
+{
+	T a,b;
+	public:
+		A (T x, T y)		    //Parameterized Constructor
+		{
+			a=x;
+			b=y;
+		}
+		void show()
+		{
+			cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
+		}
+};
+
+int main()
+{
+	A <int> obj(20,30);			      //Syntax is: ClassName <DataType> ClassObject;
+	obj.show();					          //T gets replaced by integer value
+	 
+	A <float> obj1(20.5,30.5);	  //T gets replaced by floating value	
+	obj1.show();
+	
+	A <char> obj2('N','K');		    //T gets replaced by character
+	obj2.show(); 
+	
+	return 0;
+}
+
+/* Output:
+a= 20
+b= 30
+a= 20.5
+b= 30.5
+a= N
+b= K
+*/
