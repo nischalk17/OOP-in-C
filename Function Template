@@ -13,7 +13,7 @@ void show(T a, T b)		//function with parameter list
 int main()
 {
 	int w=20, x=30;			//T gets replaced by integer value
-	float y=20.5, z=30.5;	//T gets replaced by floating value
+	float y=20.5, z=30.5;		//T gets replaced by floating value
 	char p= 'N', q='K';		//T gets replaced by character 
 	show(w,x);
 	show(y,z);
