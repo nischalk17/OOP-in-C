@@ -1,0 +1,22 @@
+/* Macros are designed to reduce function call overhead in case of smaller functions
+They are defined by using the '#' sign as they are processed by macro-processors and not by compilers
+*/
+
+#include<iostream>
+using namespace std;
+
+#define Product(a,b)	a*b			//macro definition
+#define Division(a,b)	a/b
+
+int main()
+{
+	int x=4, y=2;
+	cout<<"Product is: "<<Product(x,y)<<endl;
+	cout<<"Division is: "<<Division(x,y)<<endl;
+	return 0;
+}
+
+/* Output:
+Product is: 8
+Division is: 2
+*/
