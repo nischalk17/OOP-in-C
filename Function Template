@@ -4,7 +4,7 @@ that can be used with arbitrary data types */
 
 #include<iostream>
 using namespace std;
-template <class T>		//syntax of function template
+template <class T>		//syntax of function template; Here, T represents any kind of data-type
 void show(T a, T b)		//function with parameter list
 {
 	cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
