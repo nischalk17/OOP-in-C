@@ -1,0 +1,41 @@
+/* A constructor that is used to copy or initialize the value of 
+one object to another object is called copy constructor */
+
+#include<iostream>
+using namespace std;
+class A
+{
+	public:
+		int a,b;
+		A(int x, int y)		//parameterized constructor
+		{
+			a=x;
+			b=y;
+		}
+		
+		A(A &ref)		//copy constructor
+		{
+			a=ref.a;
+			b=ref.b;
+		}
+		void show()
+		{
+			cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
+		}
+};
+
+int main()
+{
+	A obj1(20,30);
+	A obj2=obj1;
+	obj1.show();
+	obj2.show();
+	return 0;
+}
+
+/* Output:
+a= 20
+b= 30
+a= 20
+b= 30
+*/
