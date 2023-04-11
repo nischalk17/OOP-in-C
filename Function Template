@@ -1,0 +1,32 @@
+/* Function template are used to write generic functions 
+that can be used with arbitrary data types */
+
+
+#include<iostream>
+using namespace std;
+template <class T>		//syntax of function template
+void show(T a, T b)		//function with parameter list
+{
+	cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
+}
+
+int main()
+{
+	int w=20, x=30;			//T gets replaced by integer value
+	float y=20.5, z=30.5;	//T gets replaced by floating value
+	char p= 'N', q='K';		//T gets replaced by character 
+	show(w,x);
+	show(y,z);
+	show(p,q);
+	return 0;	
+}
+
+
+/* Output:
+a= 20
+b= 30
+a= 20.5
+b= 30.5
+a= N
+b= K
+*/
