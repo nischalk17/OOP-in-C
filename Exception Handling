@@ -1,0 +1,46 @@
+/* Exception may arise due to invalid inputs
+Exception handling mechanism handles run-time error by try, throw and catch process
+An attempt to divide by 0 may cause an exception which is shown in following eg  */
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a,b,c;
+	cout<<"Enter values of a and b"<<endl;
+	cin>>a>>b;
+	
+	try
+	{
+		if (b==0)
+		throw b;
+		else
+		{
+			c=a/b;
+			cout<<"Result is: "<<c<<endl;
+		}
+	}
+	
+	catch(int x)
+	{
+		cout<<"Cannot divide by b which is = "<<x<<endl;
+	}
+	
+	return 0;
+}
+
+
+/* Output:
+First execution:
+Enter values of a and b
+8
+4
+Result is: 2
+
+Second execution:
+Enter values of a and b
+7
+0
+Cannot divide by b which is = 0
+*/
