@@ -1,0 +1,27 @@
+/* When arguments are missing from function call, default value will be used for calculation
+Eg below shows how missing arguments and default arguments are handled by the function simultaneously */
+
+
+#include <iostream>
+using namespace std;
+int sum (int a=10, int b=20, int c=30)		//default values
+{
+	int z=a+b+c;
+}
+
+int main()
+{
+	cout<<sum()<<endl;		//no values provided, so default values are used
+	cout<<sum(15)<<endl;	//a will be 15, and default values will be used for b and c
+	cout<<sum(15,25)<<endl;	//a and b will be 15 and 25 respectively, and default values will be used for c
+	cout<<sum(15,25,35)<<endl;	//all 3 values are provided so no default values will be used
+	return 0;
+}
+
+
+/* Output:
+60
+65
+70
+75
+*/
