@@ -10,8 +10,8 @@ class A
 		int a,b;
 		A()		//default constructor
 		{
-			a=10;
-			b=20;
+			a=20;
+			b=30;
 		}
 		void show()
 		{
@@ -34,14 +34,14 @@ int main()
 	A obj1;
 	obj1.show();
 	
-	A obj2(30,40);
+	A obj2(40,50);
 	obj2.display();
 	return 0;
 }
 
 /* Output:
-a= 10
-b= 20
-a= 30
-b= 40
+a= 20
+b= 30
+a= 40
+b= 50
 */
