@@ -11,10 +11,10 @@ int main()
 {
 	days d;
 	d=Thursday;
-	cout<<"Today is "<<d+1<<"th day";
+	cout<<"Today is "<<d<<"th day";
 	return 0;
 	}
 	
 /* Output:
-Today is 6th day
+Today is 5th day
 */
