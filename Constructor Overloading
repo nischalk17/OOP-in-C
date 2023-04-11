@@ -1,0 +1,47 @@
+/* If a class contains multiple constructors where each type of constructors have 
+different parameter list, then this mechanism is called constructor overloading */
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+	public:
+		int a,b;
+		A()		//default constructor
+		{
+			a=10;
+			b=20;
+		}
+		void show()
+		{
+			cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
+		}
+		
+		A(int x, int y)		//parameterized constructor with 2 arguments
+		{
+			a=x;
+			b=y;
+		}
+		void display()
+		{
+			cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
+		}
+};
+
+int main()
+{
+	A obj1;
+	obj1.show();
+	
+	A obj2(30,40);
+	obj2.display();
+	return 0;
+}
+
+/* Output:
+a= 10
+b= 20
+a= 30
+b= 40
+*/
