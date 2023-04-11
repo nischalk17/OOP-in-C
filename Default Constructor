@@ -12,11 +12,15 @@ class A
 			a=20;
 			b=30;
 		}
+		void show()
+		{
+			cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
+		}
 };
 int main()
 {
 	A obj;
-	cout<<"a= "<<obj.a<<endl<<"b= "<<obj.b<<endl;
+	obj.show();
 	return 0;
 }
 
