@@ -1,0 +1,25 @@
+// A constructor that accepts no parameter is called default constructor
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+	private:
+		int a,b;
+	public:
+		A()		//default constructor
+		{
+			a=20, b=30;
+			cout<<"The sum is: "<<a+b;
+		}
+};
+int main()
+{
+	A obj;
+	return 0;
+}
+
+/*Output:
+The sum is: 50
+*/
