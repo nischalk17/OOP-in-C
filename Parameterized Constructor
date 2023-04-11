@@ -14,7 +14,7 @@ class A
 		}
 		void show()
 		{
-				cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
+			cout<<"a= "<<a<<endl<<"b= "<<b<<endl;
 		}
 };
 int main()
