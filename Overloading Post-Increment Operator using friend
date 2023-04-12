@@ -19,9 +19,9 @@ class rectangle
 				cout<<"Breadth= "<<breadth<<endl;
 			}	
 			
-			friend void operator ++ (rectangle &r1, int);	//syntax
+			friend void operator ++ (rectangle&r1, int);	//syntax
 };			
-			void operator ++ (rectangle &r1, int)
+			void operator ++ (rectangle&r1, int)
 			{
 				r1.length++;
 				r1.breadth++;
