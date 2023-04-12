@@ -1,0 +1,36 @@
+/* Scope resolution operator is (::) is also used to define a function outside the class.
+Let us declare two functions user1 and user2 inside the class named user.
+Since user1 and user2 are the member functions of the class user, we need to use 
+scope resolution operator to define the function outside the class as follows:  */
+
+#include<iostream>
+using namespace std;
+class user
+{
+	public:
+	void user1();         //member functions inside the class user
+	void user2();
+};
+
+void user::user1()      //accessing first member function by using ::
+{
+	cout<<"This is User 1"<<endl;
+}
+void user::user2()      //accessing second member function by using ::
+{
+	cout<<"This is User 2"<<endl;
+}
+
+int main()
+{
+	user obj;             //object initialization
+	obj.user1();
+	obj.user2();
+	return 0;
+}
+
+
+/* Ouput:
+This is User 1
+This is User 2
+*/
