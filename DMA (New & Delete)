@@ -1,0 +1,52 @@
+/* DMA refers to the process of allocating memory during program run time  
+using heap storage of memory to reduce wastage of memory.
+New operator denotes a request for memory allocation on the free storage(heap)
+Delete operator is used to free up the memory space after it is no longer required  */ 
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, i,total=0;
+	cout<<"Enter number of elements: "<<endl;
+	cin>>n;
+	int *p= new int [n];		  //syntax for new operator
+	
+	cout<<"Enter the value for "<<n<<" number of elements"<<endl;
+	
+	for(i=0;i<n;i++)
+	{
+		cin>>p[i];				      //first element will be stored on p[0] and so on
+	}
+	
+	cout<<"The elements are: "<<endl;
+	
+	for(i=0;i<n;i++)
+	{
+		cout<<p[i]<<endl;
+		total=total + p[i];	
+	}
+	
+	cout<<"Total= "<<total<<endl;
+	
+	delete[] p;			        //syntax for delete operator
+	return 0;
+}
+
+
+/* Output:
+Enter number of elements:
+4
+Enter the value for 4 number of elements
+1
+2
+3
+4
+The elements are:
+1
+2
+3
+4
+Total= 10
+*/
