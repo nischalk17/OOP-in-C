@@ -1,5 +1,6 @@
-/* Friend function is used to access the private and protected 
-data members and member functions of the class  */
+/* Friend function is used to access the private and protected data members and member functions of the class.
+It violates the property of OOP as it allows non-member functions to have access to the class's internal data 
+and implementation details which makes it difficult to maintain data hiding and encapsulation */
 
 
 #include<iostream>
