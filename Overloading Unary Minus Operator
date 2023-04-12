@@ -1,4 +1,4 @@
-/*	Unary Minus operator is also called as Arithmetic Minus or Negation operator
+/* Unary Minus operator is also called as Arithmetic Minus or Negation operator
 Unary Minus operator provides opposite value
 If value of x is positive, then unary operator makes x negative and vice-versa
 Overloading Unary Minus operator (-) using friend function:	*/
