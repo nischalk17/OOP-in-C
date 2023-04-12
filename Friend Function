@@ -1,0 +1,39 @@
+/* Friend function is used to access the private and protected 
+data members and member functions of the class  */
+
+
+#include<iostream>
+using namespace std;
+class A
+{
+	private:
+		int a,b;
+		public:
+			void setdata()
+			{
+				a=20;
+				b=30;
+			}
+			
+			friend void sum(A obj);			//syntax of friend function
+};
+
+			void sum(A obj)
+			{
+				int c;
+				c=obj.a+obj.b;
+				cout<<"Sum= "<<c<<endl;
+			}
+
+int main()
+{
+	A obj1;
+	obj1.setdata();
+	sum(obj1);
+	return 0;
+}
+
+
+/* Output:
+Sum= 50
+*/
