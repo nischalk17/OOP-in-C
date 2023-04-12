@@ -1,0 +1,41 @@
+// Overloading post-increment operator(++)
+
+#include<iostream>
+using namespace std;
+class rectangle
+{
+	private:
+		int length, breadth;
+		public:
+			rectangle(int l, int b)
+			{
+				length=l;
+				breadth=b;
+			}
+			
+			void operator ++(int)		//syntax
+			{
+				length++;
+				breadth++;
+			}
+			
+			void display()
+			{
+				cout<<"Length= "<<length<<endl;
+				cout<<"Breadth= "<<breadth<<endl;
+			}		
+};
+
+int main()
+{
+	rectangle r1(5,6);
+	r1++;
+	r1.display();
+	return 0;
+}
+
+
+/* Output:
+Length= 6
+Breadth= 7
+*/
