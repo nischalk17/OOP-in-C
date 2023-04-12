@@ -1,0 +1,21 @@
+/* Scope resolution operator (::) is used to access a global variable
+when there is a local\variable with the same name   */
+
+
+#include<iostream>
+using namespace std;
+int x; 			// Global x
+
+int main()
+{
+	int x = 10; 	// Local x
+	cout<<"Value of Local x is: "<<x<<endl;
+	cout<<"Value of Global x is: "<<::x<<endl;
+	return 0;
+}
+
+
+/* Output:
+Value of Local x is: 10
+Value of Global x is: 0
+*/
