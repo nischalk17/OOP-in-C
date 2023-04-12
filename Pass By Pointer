@@ -1,0 +1,36 @@
+/* The working principle of Pass by Pointer is same as that of Pass by Reference.
+But instead of using the reference variable, we use the pointer variable in function
+definition and pass address of the variable from function call statement  */
+
+
+#include<iostream>
+using namespace std;
+void exchange(int *a, int *b)
+{
+	int temp;
+	temp=*a;
+	*a=*b;
+	*b=temp;
+}
+
+int main()
+{
+	int x=5, y=10;
+	
+	cout<<"Before function call:"<<endl;
+	cout<<"x= "<<x<<endl<<"y= "<<y<<endl;
+	
+	exchange (&x,&y);
+	cout<<"After function call:"<<endl;
+	cout<<"x= "<<x<<endl<<"y= "<<y<<endl;
+	return 0;
+}
+
+/*Output:
+Before function call:
+x= 5
+y= 10
+After function call:
+x= 10
+y= 5
+*/
