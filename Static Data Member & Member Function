@@ -1,3 +1,11 @@
+/* Only one copy is created of static member for all the objects of the class.
+Static data member retains its value and is always initialized with 0.
+Static member function can access only the static data members.  
+A real world scenario where static data member can be used is shown below:
+Following eg demonstrates a program that calculates the volume of the boxes 
+while also counting the total number of boxes*/
+
+
 #include<iostream>
 using namespace std;
 class box
@@ -14,7 +22,7 @@ class box
 				ObjectCount++;			// Increases every time an object is created
 			}
 			
-			void show()					//normal member function
+			void show()				//normal member function
 			{
 				cout<<"The volume of the boxes are:"<<(length*breadth*height)<<endl;
 				
