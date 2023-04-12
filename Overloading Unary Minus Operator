@@ -1,0 +1,49 @@
+/*	Unary Minus operator is also called as Arithmetic Minus or Negation operator
+Unary Minus operator provides opposite value
+If value of x is positive, then unary operator makes x negative and vice-versa
+Overloading Unary Minus operator (-) using friend function:	*/
+
+
+#include<iostream>
+using namespace std;
+class rectangle
+{
+	private:
+		int length, breadth;
+		public:
+			rectangle(int l, int b)
+			{
+				length=l;
+				breadth=b;
+			}
+			
+			void display()
+			{
+				cout<<"Length= "<<length<<endl;
+				cout<<"Breadth= "<<breadth<<endl;
+			}
+			
+			friend void operator -(rectangle&r1);		//syntax
+};
+			void operator -(rectangle&r1)
+			{
+				r1.length= -r1.length;
+				r1.breadth= -r1.breadth;
+			}
+			
+int main()
+{
+	rectangle r1(5,-6);
+	r1.display();
+	-r1;
+	r1.display();
+	return 0;
+}
+
+
+/* Output:
+Length= 5
+Breadth= -6
+Length= -5
+Breadth= 6
+*/
