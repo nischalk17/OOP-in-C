@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class shop {
+    int item;
+    int m;
+    int price;
+public:
+    static int count;
+    shop() {};
+    shop(int i) {
+        item = i;
+        count++;
+    }
+    static void display() {
+        cout << "The no of item in the shop is " << count << endl;
+    }
+};
+
+int shop::count = 0;
+
+int main() {
+    
+    int n;
+    cout<<"Enter the number of item:";
+    cin>>n;
+    shop *ptr=new shop[n];
+    for(int i=0; i<n; i++){
+        ptr[i]=shop(i);
+    }
+   
+    shop::display();
+
+    return 0;
+}
